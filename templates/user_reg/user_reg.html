@@ -1,0 +1,14 @@
+{% extends 'polls/base.html' %}
+
+{% block title %}Registration{% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="container col-lg-10 col-md-9 col-sm-8  col-md-offset-1 mt-5">
+        <h1 class="text-center">Registration</h1><hr>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form | crispy }}
+            <input class="btn btn-success btn-lg btn-block " type="submit"  name="Create User" value="Signup" />
+        </form>
+    </div>
+{% endblock %}
